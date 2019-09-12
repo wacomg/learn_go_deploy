@@ -6,7 +6,7 @@ import (
     "net/http"
     "net/http/httptest"
     "testing"
-    "../version"
+    "github.com/wacomg/learn_go_deploy/version"
 )
 
 func TestHome(t *testing.T) {
