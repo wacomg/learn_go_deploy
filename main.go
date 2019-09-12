@@ -5,8 +5,8 @@ import (
     "net/http"
     "os"
 
-    "git.orglot.office/opanteleev/learn_go_deploy/handlers"
-    "git.orglot.office/opanteleev/learn_go_deploy/version"
+    "github.com/wacomg/learn_go_deploy/handlers"
+    "github.com/wacomg/learn_go_deploy/version"
 )
 
 // How to try it: PORT=8000 go run main.go

@@ -4,7 +4,7 @@ import (
     "encoding/json"
     "log"
     "net/http"
-    "../version"
+    "github.com/wacomg/learn_go_deploy/version"
 )
 
 // home is a simple HTTP handler function which writes a response.
