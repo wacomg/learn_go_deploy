@@ -1,4 +1,4 @@
-PROJECT?=git.orglot.office/opanteleev/learn_go_deploy
+PROJECT?=github.com/wacomg/learn_go_deploy
 APP?=advent
 PORT?=8000
 
