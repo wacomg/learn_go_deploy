@@ -4,16 +4,25 @@ import (
     "log"
     "net/http"
     "os"
+    "./handlers"
+)
 
-    "github.com/wacomg/learn_go_deploy/handlers"
-    "github.com/wacomg/learn_go_deploy/version"
+var (
+
+    Commit string
+    BuildTime string
+    Release string
 )
 
 // How to try it: PORT=8000 go run main.go
 func main() {
+    handlers.Commit = Commit
+    handlers.BuildTime = BuildTime
+    handlers.Release = Release
+    
     log.Printf(
         "Starting the service...\ncommit: %s, build time: %s, release: %s",
-        version.Commit, version.BuildTime, version.Release,
+        Commit, BuildTime, Release,
     )
     port := os.Getenv("PORT")
     if port == "" {

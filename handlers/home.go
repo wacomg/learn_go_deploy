@@ -4,8 +4,15 @@ import (
     "encoding/json"
     "log"
     "net/http"
-    "github.com/wacomg/learn_go_deploy/version"
 )
+
+var (
+    Commit string
+    BuildTime string
+    Release string
+)
+
+
 
 // home is a simple HTTP handler function which writes a response.
 func home(w http.ResponseWriter, _ *http.Request) {
@@ -14,7 +21,7 @@ func home(w http.ResponseWriter, _ *http.Request) {
         Commit    string `json:"commit"`
         Release   string `json:"release"`
     }{
-        version.BuildTime, version.Commit, version.Release,
+        BuildTime, Commit, Release,
     }
 
     body, err := json.Marshal(info)
